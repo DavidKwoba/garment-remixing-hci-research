@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 800px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#e54444", "font": {"color": "black"}, "id": 1, "label": "1: no mods...", "shape": "dot", "size": 14.94, "title": "\n        \u003cb\u003eno mods\u003c/b\u003e\u003cbr\u003e\n        Posts: 15\u003cbr\u003e\n        Total Likes: 1,494\u003cbr\u003e\n        Avg Likes: 99.6\u003cbr\u003e\n        Total Hashtags: 92\u003cbr\u003e\n        Avg Hashtags: 6.1\n        "}, {"color": "#c5e544", "font": {"color": "black"}, "id": 2, "label": "2: less pockets...", "shape": "dot", "size": 12.24, "title": "\n        \u003cb\u003eless pockets\u003c/b\u003e\u003cbr\u003e\n        Posts: 17\u003cbr\u003e\n        Total Likes: 1,224\u003cbr\u003e\n        Avg Likes: 72.0\u003cbr\u003e\n        Total Hashtags: 141\u003cbr\u003e\n        Avg Hashtags: 8.3\n        "}, {"color": "#44e585", "font": {"color": "black"}, "id": 3, "label": "3: buttonless...", "shape": "dot", "size": 22.89, "title": "\n        \u003cb\u003ebuttonless\u003c/b\u003e\u003cbr\u003e\n        Posts: 4\u003cbr\u003e\n        Total Likes: 2,289\u003cbr\u003e\n        Avg Likes: 572.2\u003cbr\u003e\n        Total Hashtags: 60\u003cbr\u003e\n        Avg Hashtags: 15.0\n        "}, {"color": "#4485e5", "font": {"color": "black"}, "id": 4, "label": "4: cropped...", "shape": "dot", "size": 10, "title": "\n        \u003cb\u003ecropped\u003c/b\u003e\u003cbr\u003e\n        Posts: 6\u003cbr\u003e\n        Total Likes: 456\u003cbr\u003e\n        Avg Likes: 76.0\u003cbr\u003e\n        Total Hashtags: 34\u003cbr\u003e\n        Avg Hashtags: 5.7\n        "}, {"color": "#c544e5", "font": {"color": "black"}, "id": 5, "label": "5: oversized...", "shape": "dot", "size": 10, "title": "\n        \u003cb\u003eoversized\u003c/b\u003e\u003cbr\u003e\n        Posts: 3\u003cbr\u003e\n        Total Likes: 136\u003cbr\u003e\n        Avg Likes: 45.3\u003cbr\u003e\n        Total Hashtags: 29\u003cbr\u003e\n        Avg Hashtags: 9.7\n        "}]);
+        edges = new vis.DataSet([{"color": "lightgray", "from": 1, "title": "Similarity connection (engagement pattern similarity: 0.72)", "to": 2, "width": 1}, {"color": "lightgray", "from": 1, "title": "Similarity connection (engagement pattern similarity: 0.76)", "to": 4, "width": 1}, {"color": "lightgray", "from": 2, "title": "Similarity connection (engagement pattern similarity: 0.95)", "to": 4, "width": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"physics": {"enabled": true, "stabilization": {"iterations": 100}, "barnesHut": {"gravitationalConstant": -8000, "centralGravity": 0.3, "springLength": 95, "springConstant": 0.04, "damping": 0.09}}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
