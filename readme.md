@@ -10,6 +10,7 @@ process the data, build a network graph, and produce both interactive and static
 along with summary statistics.
 
 **Part 1: Data Scrapping - Instaloader** 
+
 This python script uses the Instaloader library to scrape recent posts from a 
 given hashtag (garment pattern name). It downloads the images and saves the captions 
 and URL into a CSV file. 
@@ -21,9 +22,10 @@ Implementation Approach
 - Saves post metadata (caption + link) to a CSV file. 
 
 Environment Variables 
+
 This project uses a .env file for credentials 
-     - IG_USERNAME=your_username 
-     - IG_PASSWORD=your_password 
+- IG_USERNAME=your_username 
+- IG_PASSWORD=your_password 
 
 **Important Notes (2025)** 
 - Instagram has changed its API and web endpoints since 2022.
@@ -36,6 +38,7 @@ This project uses a .env file for credentials
     - Switch to Instagram GraphQL queries or HTML parsing.
 
 **Part 2: Data Visualization - NetworkX and matplotlib** 
+
 Implementation Approach 
 Data Input: Read a CSV file containing post/cluster information.
 Network Construction: Build a NetworkX graph with clusters as nodes and relationships as edges.
@@ -44,6 +47,7 @@ Static Visualization: Generate a matplotlib plot of the network with size/color 
 Interactive Visualization: Generate a browser-based Pyvis network for exploring node/edge relationships.
 
 **Running the program** 
+
 After entering the name of the `.csv` file containing your dataset. The script will:
 1. Parse the CSV and construct the graph.
 2. Print network statistics to the terminal.
@@ -53,6 +57,7 @@ After entering the name of the `.csv` file containing your dataset. The script w
 You can use the existing CSV files to format your input file. 
 
 **Your output should display:** 
+
 The Terminal Statistics: 
 - Number of nodes and edges
 - Graph connectivity
