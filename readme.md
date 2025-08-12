@@ -1,5 +1,4 @@
 **Garment Remixing Cycle HCI Research Project - archival code** 
-
 This project was completed as part of a research project that explored how various 
 garment makers (tailors, dressmakers, etc) discover, share patterns, and combine the patterns 
 they find online (remixing). The project has 2 components which are basically 
@@ -9,7 +8,7 @@ based on shared characteristics (e.g., style, tags, shared posts). It uses the C
 process the data, build a network graph, and produce both interactive and static visualizations 
 along with summary statistics.
 
-Part 1: Data Scrapping - Instaloader 
+**Part 1: Data Scrapping - Instaloader** 
 This python script uses the Instaloader library to scrape recent posts from a 
 given hashtag (garment pattern name). It downloads the images and saves the captions 
 and URL into a CSV file. 
@@ -25,7 +24,7 @@ This project uses a .env file for credentials
      - IG_USERNAME=your_username 
      - IG_PASSWORD=your_password 
 
-Important Notes (2025) 
+**Important Notes (2025) **
 - Instagram has changed its API and web endpoints since 2022.
 - The function get_hashtag_posts() used here may no longer work without modifications, due to:
     - Removal of the ?__a=1 JSON endpoint for hashtags.
@@ -35,7 +34,7 @@ Important Notes (2025)
     - Use a saved browser session or cookies instead of direct login.
     - Switch to Instagram GraphQL queries or HTML parsing.
 
-Part 2: Data Visualization - NetworkX and matplotlib 
+**Part 2: Data Visualization - NetworkX and matplotlib **
 Implementation Approach 
 Data Input: Read a CSV file containing post/cluster information.
 Network Construction: Build a NetworkX graph with clusters as nodes and relationships as edges.
@@ -43,7 +42,7 @@ Statistical Summary: Print overall graph metrics and per-cluster statistics (pos
 Static Visualization: Generate a matplotlib plot of the network with size/color encoding for popularity and activity.
 Interactive Visualization: Generate a browser-based Pyvis network for exploring node/edge relationships.
 
-Running the program 
+**Running the program **
 After entering the name of the `.csv` file containing your dataset. The script will:
 1. Parse the CSV and construct the graph.
 2. Print network statistics to the terminal.
@@ -52,8 +51,7 @@ After entering the name of the `.csv` file containing your dataset. The script w
 
 You can use the existing CSV files to format your input file. 
 
-Your output should display: 
-
+**Your output should display: **
 The Terminal Statistics: 
 - Number of nodes and edges
 - Graph connectivity
