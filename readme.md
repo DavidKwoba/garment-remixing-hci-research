@@ -1,4 +1,4 @@
-Garment Remixing Cycle HCI Research Project - archival code 
+**Garment Remixing Cycle HCI Research Project - archival code** 
 
 This project was completed as part of a research project that explored how various 
 garment makers (tailors, dressmakers, etc) discover, share patterns, and combine the patterns 
@@ -51,7 +51,6 @@ After entering the name of the `.csv` file containing your dataset. The script w
 4. Display a static matplotlib visualization.
 
 You can use the existing CSV files to format your input file. 
-
 
 Your output should display: 
 
