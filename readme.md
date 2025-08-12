@@ -25,7 +25,7 @@ This project uses a .env file for credentials
      - IG_USERNAME=your_username 
      - IG_PASSWORD=your_password 
 
-**Important Notes (2025)**
+**Important Notes (2025)** 
 - Instagram has changed its API and web endpoints since 2022.
 - The function get_hashtag_posts() used here may no longer work without modifications, due to:
     - Removal of the ?__a=1 JSON endpoint for hashtags.
@@ -35,7 +35,7 @@ This project uses a .env file for credentials
     - Use a saved browser session or cookies instead of direct login.
     - Switch to Instagram GraphQL queries or HTML parsing.
 
-**Part 2: Data Visualization - NetworkX and matplotlib**
+**Part 2: Data Visualization - NetworkX and matplotlib** 
 Implementation Approach 
 Data Input: Read a CSV file containing post/cluster information.
 Network Construction: Build a NetworkX graph with clusters as nodes and relationships as edges.
@@ -43,7 +43,7 @@ Statistical Summary: Print overall graph metrics and per-cluster statistics (pos
 Static Visualization: Generate a matplotlib plot of the network with size/color encoding for popularity and activity.
 Interactive Visualization: Generate a browser-based Pyvis network for exploring node/edge relationships.
 
-**Running the program**
+**Running the program** 
 After entering the name of the `.csv` file containing your dataset. The script will:
 1. Parse the CSV and construct the graph.
 2. Print network statistics to the terminal.
@@ -52,7 +52,7 @@ After entering the name of the `.csv` file containing your dataset. The script w
 
 You can use the existing CSV files to format your input file. 
 
-**Your output should display:**
+**Your output should display:** 
 The Terminal Statistics: 
 - Number of nodes and edges
 - Graph connectivity
